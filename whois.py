@@ -1,9 +1,11 @@
 import pythonwhois
-
-data = pythonwhois.net.get_whois_raw("www.google.com",with_server_list=False)
-
-
 import pdb
-pdb.set_trace()
 
-print(data['www.google.com'])
+f = open('url_sample.txt', 'r')
+line = f.readlines()
+
+for i in line:
+        print i
+        print pythonwhois.get_whois(i)
+
+
